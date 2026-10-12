@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Birthday Night</title>
+<meta name="description" content="Birthday Night — you are invited. Pool, drinks, good company.">
+<meta name="theme-color" content="#0b0908">
+<meta property="og:title" content="Birthday Night — Let's play">
+<meta property="og:description" content="You are invited. Pool, drinks, good company.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎱%3C/text%3E%3C/svg%3E">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('pending');setTimeout(function(){document.documentElement.classList.remove('pending')},4000)}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700;800&family=Archivo:wdth,wght@62..125,500..900&family=Jost:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#details">Skip to the event details</a>
+
+<header class="nav" id="nav">
+  <a class="nav__mark" href="#top" data-c="host.monogram" aria-label="Back to top">BN</a>
+  <span class="nav__date" data-v="dateShort"></span>
+  <a class="nav__cta magnetic" href="#rsvp">RSVP</a>
+</header>
+
+<main id="top">
+
+  <!-- 1 · HERO -->
+  <section class="hero" data-bg="ink" aria-label="Invitation">
+    <div class="hero__frame"><img class="hero__img" data-img="hero" alt="" fetchpriority="high"></div>
+    <div class="spot" aria-hidden="true"></div>
+    <p class="hero__host" data-v="hostLine"></p>
+    <h1 class="hero__title">
+      <span class="line"><span class="line__in" data-c="event.title.0">Birthday</span></span>
+      <span class="line line--2"><span class="line__in" data-c="event.title.1">Night</span></span>
+    </h1>
+    <p class="hero__script" data-c="event.tagline">Let's play</p>
+    <p class="hero__sub" data-c="event.subtitle"></p>
+    <div class="hero__meta"><span data-c="copy.heroInvite">You are invited</span><span class="dot">✦</span><span data-v="date"></span></div>
+    <a class="scrollcue" href="#intro" aria-label="Scroll down"><span>Scroll</span><i></i></a>
+  </section>
+
+  <!-- 2 · INTRO -->
+  <section class="intro" id="intro" data-bg="ink" data-section="intro">
+    <p class="label" data-c="copy.introLabel"></p>
+    <p class="intro__text" id="introText" data-c="copy.intro"></p>
+    <figure class="intro__a"><div class="mask"><img data-img="introA" data-parallax="8" alt="" loading="lazy"></div></figure>
+    <figure class="intro__b"><div class="mask"><img data-img="introB" data-parallax="12" alt="" loading="lazy"></div></figure>
+  </section>
+
+  <div class="ticker-wrap"><div class="ticker" aria-hidden="true"><div class="ticker__track" id="tickerTrack"></div></div></div>
+
+  <!-- 3 · THE ROOM (pinned reveal) -->
+  <section class="room" data-bg="ink" data-section="room">
+    <div class="room__media"><img class="room__img" data-img="room" alt="" loading="lazy"></div>
+    <div class="room__shade"></div>
+    <p class="label room__label" data-c="copy.roomLabel"></p>
+    <h2 class="room__heading"><span class="room__word" id="roomW1" data-c="copy.roomHeading.0"></span><span class="room__word room__word--b" id="roomW2" data-c="copy.roomHeading.1"></span></h2>
+    <p class="room__caption" data-c="copy.roomCaption"></p>
+  </section>
+
+  <!-- 4 · GALLERY (horizontal) -->
+  <section class="gallery" id="gallery" data-bg="ink" data-section="gallery">
+    <div class="gallery__head">
+      <p class="label" data-c="copy.galleryLabel"></p>
+      <h2 class="gallery__title" data-c="copy.galleryHeading"></h2>
+    </div>
+    <div class="gallery__viewport" id="galleryViewport" tabindex="0" aria-label="Photo gallery, scroll sideways">
+      <div class="gallery__track" id="galleryTrack"></div>
+    </div>
+  </section>
+
+  <!-- 4b · RACK BREAK (playable) -->
+  <section class="break" id="break" data-bg="ink" data-section="rackBreak">
+    <p class="label" data-c="copy.breakLabel"></p>
+    <h2 class="break__title" data-c="copy.breakHeading"></h2>
+    <div class="break__stage"><canvas id="breakCanvas" role="img" aria-label="An animated pool table: a white ball breaks a rack of fifteen balls. Tap the table to shoot again."></canvas></div>
+    <div class="break__foot"><p class="hint" data-c="copy.breakHint"></p><button class="btn btn--ghost magnetic" id="breakBtn" type="button"></button></div>
+  </section>
+
+  <!-- 5 · TYPE BAND -->
+  <section class="typeband" data-bg="felt" data-section="typeBand" aria-hidden="true">
+    <div class="typeband__inner" id="typeBand"></div>
+  </section>
+
+  <!-- 6 · INVITATION -->
+  <section class="invite" id="invitation" data-bg="paper" data-section="invitation">
+    <div class="invite__grid">
+      <div class="invite__copy">
+        <p class="label" data-c="copy.inviteLabel"></p>
+        <h2 class="invite__heading"><span class="line"><span class="line__in" data-c="copy.inviteHeading.0"></span></span><span class="line"><span class="line__in" data-c="copy.inviteHeading.1"></span></span></h2>
+        <p class="invite__lead" data-c="copy.inviteLead"></p>
+        <dl class="facts" id="facts"></dl>
+      </div>
+      <figure class="invite__poster"><div class="poster-tilt"><img data-img="poster" alt="" loading="lazy"></div></figure>
+    </div>
+  </section>
+
+  <!-- 7 · DETAILS -->
+  <section class="details" id="details" data-bg="ink" data-section="details">
+    <p class="label" data-c="copy.detailsLabel"></p>
+    <h2 class="details__title" data-c="copy.detailsHeading"></h2>
+    <div class="details__grid">
+      <div class="details__main">
+        <p class="details__venue" data-v="venue"></p>
+        <p class="details__address" data-v="address"></p>
+        <p class="details__when"><span data-v="date"></span> <span class="sep">/</span> <span data-v="time"></span></p>
+        <div class="btnrow">
+          <a class="btn btn--solid magnetic" data-act="maps" href="#" target="_blank" rel="noopener"><span data-lbl="openMaps"></span></a>
+          <button class="btn btn--ghost magnetic" data-act="cal" type="button"><span data-lbl="addCalendar"></span></button>
+        </div>
+        <p class="hint" id="detailsHint" role="status" aria-live="polite"></p>
+      </div>
+      <ul class="practical" id="practical"></ul>
+    </div>
+  </section>
+
+  <!-- 8 · RSVP -->
+  <section class="rsvp" id="rsvp" data-bg="ink" data-section="rsvp">
+    <p class="label" data-c="copy.rsvpLabel"></p>
+    <h2 class="rsvp__title" data-c="copy.rsvpHeading"></h2>
+    <p class="rsvp__lead" data-c="copy.rsvpLead"></p>
+    <div class="rsvp__register" id="rsvpRegister" hidden>
+      <a class="btn btn--solid magnetic" data-act="register" href="#" target="_blank" rel="noopener"><span data-lbl="register"></span></a>
+    </div>
+    <form class="rsvp__form" id="rsvpForm" novalidate>
+      <fieldset class="choices">
+        <legend class="sr">Will you attend?</legend>
+        <input type="radio" name="answer" id="ansYes" value="yes"><label for="ansYes" id="lblYes"></label>
+        <input type="radio" name="answer" id="ansNo" value="no"><label for="ansNo" id="lblNo"></label>
+      </fieldset>
+      <div class="field"><label for="rsvpName" id="lblName"></label><input id="rsvpName" name="name" type="text" autocomplete="name" maxlength="80"></div>
+      <div class="field"><label for="rsvpMsg" id="lblMsg"></label><textarea id="rsvpMsg" name="message" rows="3" maxlength="500"></textarea></div>
+      <button class="btn btn--solid magnetic" type="submit" id="rsvpSend"></button>
+      <p class="hint" id="rsvpHint" role="status" aria-live="polite"></p>
+    </form>
+    <div class="rsvp__done" id="rsvpDone" hidden tabindex="-1">
+      <p class="rsvp__doneTitle" id="doneTitle"></p>
+      <p class="rsvp__doneText" id="doneText"></p>
+      <p class="hint" id="doneNote"></p>
+      <button class="btn btn--ghost" type="button" id="rsvpChange"></button>
+    </div>
+  </section>
+
+  <!-- 8b · COUNTDOWN + VIP PASS -->
+  <section class="pass" id="pass" data-bg="hot" data-section="ticket">
+    <h2 class="pass__heading"><span class="line"><span class="line__in" data-c="ticket.heading.0"></span></span><span class="line"><span class="line__in" data-c="ticket.heading.1"></span></span></h2>
+    <div class="countdown" id="countdown" role="timer" aria-label="Countdown to the party">
+      <div class="cd cd--d"><b id="cdD">0</b><span data-lbl-cd="days"></span></div>
+      <div class="cd"><b id="cdH">00</b><span data-lbl-cd="hours"></span></div>
+      <div class="cd"><b id="cdM">00</b><span data-lbl-cd="minutes"></span></div>
+      <div class="cd cd--s"><b id="cdS">00</b><span data-lbl-cd="seconds"></span></div>
+    </div>
+    <p class="pass__live" id="cdLive" role="status" aria-live="polite"></p>
+    <div class="strip">
+      <figure class="strip__a"><img data-img="stripA" alt="" loading="lazy"></figure>
+      <figure class="strip__b"><img data-img="stripB" alt="" loading="lazy"></figure>
+      <figure class="strip__c"><img data-img="stripC" alt="" loading="lazy"></figure>
+    </div>
+    <article class="ticket" aria-label="Your pass">
+      <div class="ticket__top">
+        <div class="ticket__info">
+          <p class="ticket__badge" data-c="ticket.badge"></p>
+          <h2 class="ticket__title" id="tkTitle" data-c="ticket.title"></h2>
+          <p class="ticket__sub" data-c="ticket.sub"></p>
+        </div>
+        <figure class="ticket__qr" aria-hidden="true"><svg viewBox="0 0 7 7" shape-rendering="crispEdges"><rect width="7" height="7" fill="#fff"/><g fill="#000"><rect x="0" y="0" width="2" height="2"/><rect x="5" y="0" width="2" height="2"/><rect x="0" y="5" width="2" height="2"/><rect x="5" y="5" width="2" height="2"/><rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/></g></svg><figcaption data-c="ticket.pass"></figcaption></figure>
+      </div>
+      <div class="ticket__divider"><i></i></div>
+      <dl class="ticket__facts">
+        <div><dt data-c="labels.date"></dt><dd data-v="dateISO"></dd></div>
+        <div><dt data-c="labels.time"></dt><dd class="hot" data-v="time"></dd></div>
+        <div><dt data-c="labels.venue"></dt><dd data-v="venue"></dd></div>
+      </dl>
+      <div class="ticket__btns">
+        <a class="tbtn tbtn--solid tbtn--wide" data-act="register" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9a2 2 0 002-2h14a2 2 0 002 2v0a2 2 0 000 6v0a2 2 0 00-2 2H5a2 2 0 00-2-2v0a2 2 0 000-6z"/><path d="M14 7v10" stroke-dasharray="2 3"/></svg><span data-lbl="register"></span></a>
+        <button class="tbtn tbtn--solid" data-act="cal" type="button"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-lbl="addCalendar"></span></button>
+        <a class="tbtn tbtn--ghost" data-act="maps" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-lbl="openMaps"></span></a>
+      </div>
+      <p class="hint" role="status" aria-live="polite"></p>
+    </article>
+  </section>
+
+  <!-- 9 · FINALE -->
+  <section class="finale" data-bg="ink" data-section="finale">
+    <div class="finale__media"><img class="finale__img" data-img="finale" alt="" loading="lazy"></div>
+    <div class="finale__shade"></div>
+    <div class="spot" aria-hidden="true"></div>
+    <p class="finale__script" data-c="copy.finaleLine"></p>
+    <p class="finale__sub" data-c="copy.finaleSub"></p>
+    <a class="btn btn--solid magnetic finale__btn" href="#details" id="backBtn"></a>
+  </section>
+</main>
+
+<footer class="footer">
+  <span data-v="footerName"></span>
+  <nav class="footer__links" id="socials" aria-label="Links"></nav>
+</footer>
+
+<div class="ballprogress" aria-hidden="true"><i></i></div>
+
+<noscript><p class="noscript">This invitation needs JavaScript to display its details. Birthday Night — Let's play.</p></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/siteConfig.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
