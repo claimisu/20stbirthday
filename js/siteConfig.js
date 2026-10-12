@@ -9,7 +9,7 @@ window.SITE_CONFIG = {
   /* ---------- WHO ---------- */
   host: {
     name: "Jang Max",         // e.g. "Anna" — shown as "Hosted by Anna"; leave "" to hide
-    monogram: "JM",           // small mark in the top-left of the navigation
+    monogram: "max",           // small mark in the top-left of the navigation
   },
 
   /* ---------- THE EVENT ---------- */
@@ -20,11 +20,11 @@ window.SITE_CONFIG = {
     dateISO: "2026-10-16",   // Friday, 16 October 2026 (YYYY-MM-DD). Powers the date + calendar button.
     startTime: "20:00",     // 8 PM
     endTime: "9:00",              // optional. Empty = calendar event lasts 4 hours. Example: "23:30"
-    venueName: "The Red Felt & Vinyl Club", // e.g. "The Cue Club"
+    venueName: "필몰 오티티 닌텐도 당구 파티룸", // e.g. "The Cue Club"
     address: "",              // full street address
     dressCode: "",            // optional, e.g. "Dark colours. Red if you dare."
     notes: "",                // optional, e.g. "Bring good energy. Cake at 22:00."
-    mapsUrl: "https://map.naver.com/p/search/%ED%95%A9%EC%A0%95%EC%97%AD?c=16.97,0,0,0,dh", // Naver Map link (Hapjeong Station)
+    mapsUrl: "https://naver.me/Ix0gGmmO", // Naver Map link (Hapjeong Station)
     locale: "en-GB",          // date language/format: "en-US", "ko-KR", "ru-RU" ...
   },
 
@@ -59,7 +59,7 @@ window.SITE_CONFIG = {
     breakButton: "Try again",
     detailsLabel: "05 — Find us",
     detailsHeading: "Where & when",
-    rsvpLabel: "06 — To Bottom",
+    rsvpLabel: "06 — Resrvation",
     rsvpHeading: "Are you in?",
     rsvpLead: "Let me know so I can plan the rack.",
     finaleLine: "Let's play",
