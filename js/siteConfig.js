@@ -19,7 +19,7 @@ window.SITE_CONFIG = {
     subtitle: "Pool · Drinks · Good company",
     dateISO: "2026-10-16",   // Friday, 16 October 2026 (YYYY-MM-DD). Powers the date + calendar button.
     startTime: "20:00",     // 8 PM
-    endTime: "",              // optional. Empty = calendar event lasts 4 hours. Example: "23:30"
+    endTime: "9:00",              // optional. Empty = calendar event lasts 4 hours. Example: "23:30"
     venueName: "The Red Felt & Vinyl Club", // e.g. "The Cue Club"
     address: "",              // full street address
     dressCode: "",            // optional, e.g. "Dark colours. Red if you dare."
@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
   ticket: {
     heading: ["Doors", "open in"],   // giant headline above the countdown
     badge: "VIP admission",
-    title: "Jang Max's 21st",
+    title: "Jang Max's 20st",
     sub: "Pool 8 • Drinks • Games",
     pass: "Pass #2026-VIP",     // decorative label under the code
     countdownLabels: { days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds" },
@@ -56,10 +56,10 @@ window.SITE_CONFIG = {
     breakLabel: "04 — Warm-up",
     breakHeading: "Break the rack",
     breakHint: "Tap the table to shoot the white ball.",
-    breakButton: "Re-rack",
+    breakButton: "Try again",
     detailsLabel: "05 — Find us",
     detailsHeading: "Where & when",
-    rsvpLabel: "06 — RSVP",
+    rsvpLabel: "06 — To Bottom",
     rsvpHeading: "Are you in?",
     rsvpLead: "Let me know so I can plan the rack.",
     finaleLine: "Let's play",
@@ -70,7 +70,7 @@ window.SITE_CONFIG = {
   labels: {
     date: "Date", time: "Time", venue: "Venue", address: "Address",
     dressCode: "Dress code", notes: "Notes",
-    tbd: "To be announced",
+    tbd: "서울 마포구 서교동 399-27 3층",
     openMaps: "Open in Naver Map",
     register: "Get your ticket",
     addCalendar: "Add to calendar",
